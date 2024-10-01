@@ -1,3 +1,5 @@
+Basics Commonly used Hibernate Annotations
+
 @Entity – use to mark any class as Entity.
 @Table – use to change the table details.
 @Id- use to mark column as id(primary key).
