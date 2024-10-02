@@ -49,7 +49,7 @@ public class App {
 		
 		Session session = factory.openSession();
 		
-		Transaction tx = session.beginTransaction();
+		Transaction tx = session.beginTransaction(); // for saving data we use transaction
 		
 		session.save(std);
 		session.save(ad);//will save in database
