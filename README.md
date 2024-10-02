@@ -79,24 +79,21 @@ By using these annotations, Hibernate can persist properties of the embeddable c
 
 ## Example Code
 
- `@Embeddable`
+@Embeddable
 public class Address { 
     private String street; 
     private String city; 
     private String state; 
     private String zip; 
-
     // getters and setters 
 }
 
 @Entity
 public class Employee { 
-    @Id
-    private int id; 
-    private String name; 
-
-    @Embedded
-    private Address address; 
-
-    // getters and setters 
+	@Id
+	private int id; 
+	private String name; 
+	@Embedded
+	private Address address; 
+	// getters and setters 
 }
