@@ -97,3 +97,26 @@ public class Employee {
 	private Address address; 
 	// getters and setters 
 }
+
+## OneToOne Mapping
+One to one represents that a single entity is associated with a single instance of the other entity. An instance of a source entity can be at most mapped to one instance of the target entity. We have a lot of examples around us that demonstrate this one-to-one mapping.
+
+One person has one passport, a passport is associated with a single person.
+Leopards have unique spots, a pattern of spots is associated with a single leopard.
+We have one college ID, a college ID is uniquely associated with a person.
+You can find more day-to-day life examples if you observe. In database management systems one-to-one mapping is of two types-
+
+One-to-one unidirectional
+One-to-one bidirectional
+
+# One-to-one unidirectional
+In this type of mapping one entity has a property or a column that references to a property or a column in the target entity.
+
+# One-to-one bidirectional
+Until now the relationship was unidirectional i.e. we could access StudentGfgDetail from the Student entity but not vice-versa, but why would we want to have a bidirectional relationship, and what is the problem with a unidirectional relationship?
+
+
+Problem:
+
+
+If we somehow just delete the StudentGfgDetail entity and leave the Student entity as it is then the Student entity will have a foreign key that refers to a non-existing object which introduces the problem of dangling foreign key which is, of course, a bad practice. The option to delete the Student entity when the StudentGfgDetail entity is deleted depends on the design of the database, we might want to keep the Student entity as a record of users who left the community or just delete it. Luckily we can achieve both of the things mentioned above without modifying our database and just with the help of Hibernate, just modify StudentGfgDetail.java-
