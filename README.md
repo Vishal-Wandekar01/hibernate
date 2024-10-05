@@ -98,7 +98,7 @@ public class Employee {
 	// getters and setters 
 }
 
-## OneToOne Mapping
+### OneToOne Mapping
 One to one represents that a single entity is associated with a single instance of the other entity. An instance of a source entity can be at most mapped to one instance of the target entity. We have a lot of examples around us that demonstrate this one-to-one mapping.
 
 One person has one passport, a passport is associated with a single person.
@@ -109,10 +109,10 @@ You can find more day-to-day life examples if you observe. In database managemen
 One-to-one unidirectional
 One-to-one bidirectional
 
-## One-to-one unidirectional
+### One-to-one unidirectional
 In this type of mapping one entity has a property or a column that references to a property or a column in the target entity.
 
-## One-to-one bidirectional
+### One-to-one bidirectional
 Until now the relationship was unidirectional i.e. we could access StudentGfgDetail from the Student entity but not vice-versa, but why would we want to have a bidirectional relationship, and what is the problem with a unidirectional relationship?
 
 
@@ -121,12 +121,15 @@ Problem:
 
 If we somehow just delete the StudentGfgDetail entity and leave the Student entity as it is then the Student entity will have a foreign key that refers to a non-existing object which introduces the problem of dangling foreign key which is, of course, a bad practice. The option to delete the Student entity when the StudentGfgDetail entity is deleted depends on the design of the database, we might want to keep the Student entity as a record of users who left the community or just delete it. Luckily we can achieve both of the things mentioned above without modifying our database and just with the help of Hibernate, just modify StudentGfgDetail.java
 
-## one to many Mapping
+### one to many Mapping
 
 Hibernate one to many mapping is made between two entities where the first entity can have a relation with multiple instances of the second entity but the second can be associated with only one instance of the first entity. It is a 1 to N relationship.
 
 For example, in any company, an employee can register for multiple bank accounts but one bank account will be associated with one and only one employee.
 
 
-## Many-to-One Mapping
+### Many-to-One Mapping
 A many-to-one relationship is where one entity contains values that refer to another entity (a column or set of columns) that has unique values. In relational databases, these many-to-one relationships are often enforced by foreign key/primary key relationships, and the relationships typically are between fact and dimension tables and between levels in a hierarchy
+
+### Hibernate Many to Many
+Many-to-Many mapping is usually implemented in database using a Join Table. For example we can have Cart and Item table and Cart_Items table for many-to-many mapping. Every cart can have multiple items and every item can be part of multiple carts, so we have a many to many mapping here.
