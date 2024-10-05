@@ -16,5 +16,7 @@
 		<mapping class="com.tut.Address" />
 		<mapping class="com.map.Question" />
 		<mapping class="com.map.Answer" />
+		<mapping class="com.map.OneTM.QuestionOM" />
+		<mapping class="com.map.OneTM.AnswerOM" />
 	</session-factory>
 </hibernate-configuration>
