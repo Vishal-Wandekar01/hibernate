@@ -18,5 +18,7 @@
 		<mapping class="com.map.Answer" />
 		<mapping class="com.map.OneTM.QuestionOM" />
 		<mapping class="com.map.OneTM.AnswerOM" />
+		<mapping class="com.map.mtm.Emp" />
+		<mapping class="com.map.mtm.Project" />
 	</session-factory>
 </hibernate-configuration>
